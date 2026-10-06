@@ -62,7 +62,7 @@ Explique a escolha em duas ou três frases ("usei RICE porque há dados de uso e
 
 - Use as escalas de `references/metodos.md` e **a mesma escala e o mesmo período para todos os itens**.
 - **Marque a origem de cada estimativa:** `D` (dado fornecido ou medido) ou `E` (estimativa sua, suposição). Pontue com faixas de referência e não com falsa precisão: "Alcance 4.000" ou "Alcance 4.137" dão o mesmo resultado prático, mas o segundo finge saber o que não sabe.
-- **Calcule com cuidado.** Se puder executar código, grave os itens em um JSON temporário e rode `scripts/calcular.py` (veja o formato no topo do arquivo, ou use `scripts/exemplo-rice.json` como modelo): `python3 <pasta-desta-skill>/scripts/calcular.py rice itens.json`. Confira um item à mão. Se não puder executar código, calcule manualmente mostrando a fórmula.
+- **Calcule com cuidado.** Se puder executar código, grave os itens em um JSON temporário e rode o script `scripts/calcular.py` (o formato do JSON está no início do arquivo, e `scripts/exemplo-rice.json` serve de modelo): `python3 ${CLAUDE_SKILL_DIR}/scripts/calcular.py rice itens.json`. No chat do claude.ai, a pasta da skill é copiada para o ambiente de execução, então use o caminho relativo `scripts/calcular.py`. Confira um item à mão. Se não puder executar código, calcule manualmente mostrando a fórmula.
 - **Itens de confiança baixa** (50% ou menos): pontue, mas sinalize. Alto impacto com baixa confiança é sinal para experimentar antes de construir.
 
 ### 5. Ordenar e testar a sanidade
