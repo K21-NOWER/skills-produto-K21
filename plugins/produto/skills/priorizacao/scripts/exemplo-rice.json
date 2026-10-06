@@ -1,0 +1,11 @@
+{
+  "itens": [
+    {"nome": "Lembrete automático por WhatsApp 24h antes", "alcance": 4000, "impacto": 3, "confianca": 0.8, "esforco": 1.5},
+    {"nome": "Confirmação com um toque no lembrete", "alcance": 3200, "impacto": 2, "confianca": 0.8, "esforco": 1},
+    {"nome": "Lista de espera automática para horários vagos", "alcance": 1200, "impacto": 1, "confianca": 0.5, "esforco": 3},
+    {"nome": "Cobrança de sinal via Pix ao agendar", "alcance": 4000, "impacto": 3, "confianca": 0.5, "esforco": 2.5},
+    {"nome": "Relatório de faltas por profissional", "alcance": 300, "impacto": 1, "confianca": 0.8, "esforco": 1},
+    {"nome": "Novo tema visual da tela de agenda", "alcance": 4000, "impacto": 0.25, "confianca": 0.8, "esforco": 3},
+    {"nome": "Integração com Google Agenda do profissional", "alcance": 1500, "impacto": 0.5, "confianca": 0.8, "esforco": 2}
+  ]
+}

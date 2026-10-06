@@ -1,0 +1,16 @@
+{
+  "name": "k21-produto",
+  "description": "Skills de gestão de produto da K21 e da Nower para alunos: user stories, visão do produto, priorização e hipóteses.",
+  "owner": {
+    "name": "K21 e Nower"
+  },
+  "plugins": [
+    {
+      "name": "produto",
+      "source": "./plugins/produto",
+      "description": "Quatro skills de produto, em português: avalie e crie user stories e visões de produto com notas de 0 a 100, priorize listas de atividades com critério e valide hipóteses com experimentos, métricas e riscos.",
+      "category": "produto",
+      "tags": ["produto", "agile", "user-story", "visao", "priorizacao", "hipoteses", "pt-br"]
+    }
+  ]
+}
