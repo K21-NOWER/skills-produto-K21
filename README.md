@@ -22,11 +22,11 @@ Todas respondem em português do Brasil por padrão, explicam o raciocínio e mo
 Dois comandos, e você recebe as atualizações quando elas forem publicadas:
 
 ```
-/plugin marketplace add K21-Nower/skills-produto-K21
+/plugin marketplace add K21-NOWER/skills-produto-K21
 /plugin install produto@k21-produto
 ```
 
-Se preferir o terminal, os equivalentes são `claude plugin marketplace add K21-Nower/skills-produto-K21` e `claude plugin install produto@k21-produto`.
+Se preferir o terminal, os equivalentes são `claude plugin marketplace add K21-NOWER/skills-produto-K21` e `claude plugin install produto@k21-produto`.
 
 Depois é só pedir em linguagem natural, ou chamar uma skill pelo nome, por exemplo `/produto:user-story`.
 
@@ -38,7 +38,7 @@ Para atualizar:
 
 ### Opção 2: Claude.ai e Claude Desktop
 
-1. Baixe o `.zip` de cada skill que quiser na página de [Releases](https://github.com/K21-Nower/skills-produto-K21/releases).
+1. Baixe o `.zip` de cada skill que quiser na página de [Releases](https://github.com/K21-NOWER/skills-produto-K21/releases).
 2. No Claude, abra **Configurações**, vá em **Capacidades** (Capabilities) e **Skills**, e envie o arquivo `.zip`. Os nomes dos menus podem variar conforme a versão do aplicativo.
 3. Ative a skill.
 
@@ -104,7 +104,7 @@ scripts/empacotar.sh                gera um .zip por skill, em dist/
 
 ## Feedback
 
-Achou uma nota estranha, uma explicação confusa ou quer sugerir uma skill nova? Abra uma [issue](https://github.com/K21-Nower/skills-produto-K21/issues).
+Achou uma nota estranha, uma explicação confusa ou quer sugerir uma skill nova? Abra uma [issue](https://github.com/K21-NOWER/skills-produto-K21/issues).
 
 ## Licença
 
