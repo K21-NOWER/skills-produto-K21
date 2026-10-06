@@ -14,7 +14,7 @@ A nota geral passa de 50, mas a mensurabilidade (25) ficou abaixo de 40. Sem mé
 
 ### 1. Hipótese reescrita
 
-> **Acreditamos que** enviar um lembrete por WhatsApp 24 horas antes da consulta **para** pacientes de clínicas pequenas que agendam pelo app **vai reduzir** a taxa de faltas de [18%] para [12%] ou menos, **porque** [a maioria das faltas parece ser esquecimento e hoje a recepção só consegue ligar para parte dos pacientes; intuição, sem evidência ainda]. **Saberemos que estamos certos quando** a taxa de faltas do grupo que recebe o lembrete for pelo menos 6 pontos percentuais menor que a do grupo que não recebe, em até 7 semanas.
+> **Nós acreditamos que** enviar um lembrete por WhatsApp 24 horas antes da consulta para pacientes de clínicas pequenas que agendam pelo app **resultará em** menos faltas, **porque** [a maioria das faltas parece ser esquecimento e hoje a recepção só consegue ligar para parte dos pacientes; intuição, sem evidência ainda].
 
 Os valores entre colchetes são suposições minhas. Troque pelos números reais da clínica.
 
@@ -55,11 +55,11 @@ Cálculo: (55x12 + 35x10 + 45x16 + 25x16 + 30x12 + 80x10 + 85x10 + 90x14) ÷ 100
 
 ### 5. Métricas e critério de sucesso
 
-- **Primária:** taxa de faltas = consultas não comparecidas e não canceladas com pelo menos 2 horas de antecedência ÷ consultas agendadas, por grupo.
+- **Principal (vinculada ao problema, não à solução):** taxa de faltas = consultas não comparecidas e não canceladas com pelo menos 2 horas de antecedência ÷ consultas agendadas, por grupo.
 - **Apoio:** taxa de entrega e de leitura da mensagem; taxa de confirmação; percentual de horários liberados que foram reaproveitados.
-- **Proteção (guardrails):** reclamações e opt-out; cancelamentos de última hora (para o lembrete não trocar falta por cancelamento tardio); satisfação.
+- **Equilíbrio (guardrails):** cancelamentos de última hora (para o lembrete não trocar falta por cancelamento tardio); reclamações e opt-out; taxa de crescimento de clínicas ativas, para não "melhorar" as faltas à custa de perder clínicas.
 - **Baseline:** 18% (assumido; confirmar com os dados reais dos últimos 3 meses).
-- **Critério de sucesso:** o grupo com lembrete tem pelo menos 6 pontos percentuais menos faltas que o controle, **com pelo menos 650 consultas por grupo**.
+- **Critério de sucesso** (origem: comparação com o histórico e um CHUTE declarado): o grupo com lembrete tem pelo menos 6 pontos percentuais menos faltas que o controle, **com pelo menos 650 consultas por grupo**.
 - **Amostra:** `16 x 0,18 x 0,82 / 0,06² ≈ 656` consultas por grupo. Com 2 clínicas de cerca de 400 consultas por mês cada, cada grupo (metade das consultas) acumula cerca de 400 por mês: são cerca de 7 semanas até chegar a 656. Com 3 clínicas, cerca de 5 semanas.
 - **Regra de decisão:** se a redução for de 6 pontos ou mais, persistir e construir (C). Se ficar entre 2 e 6 pontos, investigar por segmento e melhorar a mensagem antes de decidir. Se ficar abaixo de 2, abandonar esta hipótese e voltar à A1 (a causa das faltas pode ser outra). Se a amostra não chegar a 650 por grupo, o resultado é inconclusivo: estender o teste.
 
@@ -75,16 +75,22 @@ Cálculo: (55x12 + 35x10 + 45x16 + 25x16 + 30x12 + 80x10 + 85x10 + 90x14) ÷ 100
 | Efeito novidade (o efeito some depois de semanas) | Viés | Média | Médio | Acompanhar por pelo menos 4 semanas |
 | Sazonalidade (feriados, época de gripe) | Viés | Média | Médio | Comparar grupos ao mesmo tempo, não antes e depois |
 
-### 7. Test Card
+### 7. Test Card 2.0
 
 | Campo | Conteúdo |
 |---|---|
-| **Hipótese** | Acreditamos que um lembrete por WhatsApp 24h antes da consulta reduz as faltas de pacientes de clínicas pequenas |
-| **Teste** | Para verificar isso, vamos enviar o lembrete para metade das consultas, sorteadas, em 2 ou 3 clínicas, durante 5 a 7 semanas, mantendo a outra metade como controle |
-| **Métrica** | E vamos medir a taxa de faltas de cada grupo, a entrega e leitura, a confirmação e os cancelamentos de última hora |
-| **Critério** | Estaremos certos se o grupo com lembrete tiver pelo menos 6 pontos percentuais menos faltas, com pelo menos 650 consultas por grupo |
+| **Identificação do teste** | Redução de faltas com lembrete por WhatsApp |
+| **Limite de tempo** | 7 semanas |
+| **Hipótese** | **Nós acreditamos que** enviar um lembrete por WhatsApp 24h antes da consulta **resultará em** menos faltas de pacientes de clínicas pequenas |
+| **Métricas** | **Principal:** taxa de faltas por grupo. **Equilíbrio 1:** cancelamentos de última hora. **Equilíbrio 2:** taxa de crescimento de clínicas ativas (e opt-out de pacientes como alerta) |
+| **Experimento** | Enviar o lembrete para metade das consultas, sorteadas, em 2 ou 3 clínicas, mantendo a outra metade como controle |
+| **Critérios** | Taxa de faltas do grupo com lembrete pelo menos 6 pontos percentuais menor que a do controle, com pelo menos 650 consultas por grupo; cancelamentos de última hora abaixo de [5%]; crescimento de clínicas mantido em [4%] ao mês |
 | Custo / Tempo / Confiabilidade | Baixo / 5 a 7 semanas / Alta |
-| Responsável e prazo | [a definir] |
+| Responsável | [a definir] |
+
+**Cuidados:** um experimento por vez (não mude o preço nem o canal ao mesmo tempo); não reduzir os critérios depois; manter o teste curto.
+
+**Learning Card (a preencher depois do teste):** Identificação (insight, data, responsável) · Hipótese ("nós acreditávamos que o lembrete resultaria em menos faltas") · Observação (taxas de cada grupo e métricas de equilíbrio) · Aprendizados e insights · Decisões e ações (construir a automação, ajustar a mensagem ou investigar outra causa).
 
 ### 8. User story pronta para o time
 

@@ -1,11 +1,13 @@
 ---
 name: user-story
-description: Avalia, melhora e cria user stories (histórias de usuário) com critérios de aceitação claros. No modo avaliar, dá notas de 0 a 100 por critério (persona, valor, efetividade, clareza, foco no problema, tamanho e necessidade de fatiar, critérios de aceitação, independência, estimabilidade), calcula uma nota geral e sugere como melhorar e fatiar. No modo criar, transforma ideias, requisitos ou funcionalidades soltas em stories pequenas e testáveis, com critérios de aceitação em Dado/Quando/Então. Use sempre que o usuário falar de user story, história de usuário, critérios de aceitação, refinamento de backlog, INVEST, ou perguntar "essa story está boa?", "está grande demais?", "precisa fatiar?", "transforma essa ideia em story", ou colar um texto no formato "Como [persona], quero [ação], para [benefício]", mesmo sem pedir uma avaliação explicitamente.
+description: Avalia, melhora e cria user stories (histórias de usuário) com critérios de aceitação claros. No modo avaliar, dá notas de 0 a 100 por critério (persona, valor, efetividade, clareza, foco no problema, tamanho e necessidade de fatiar, critérios de aceitação, independência, estimabilidade), calcula uma nota geral e sugere como melhorar e fatiar. No modo criar, transforma ideias, requisitos ou funcionalidades soltas em stories pequenas e testáveis, com critérios de aceitação em Dado/Quando/Então. Segue o método da K21 (saúde da história em 9 passos). Use sempre que o usuário falar de user story, história de usuário, critérios de aceitação, refinamento de backlog, INVEST, ou perguntar "essa story está boa?", "está grande demais?", "precisa fatiar?", "transforma essa ideia em story", ou colar um texto no formato "Como [persona], quero [ação], para [benefício]" ou "Eu, enquanto <personagem> desejo <necessidade> para <propósito>", mesmo sem pedir uma avaliação explicitamente.
 ---
 
 # User Story: avaliar, melhorar e criar
 
 Uma user story boa não é um documento, é um convite para uma conversa. O cartão lembra a conversa, a conversa gera entendimento e os critérios de aceitação confirmam que ficou pronto (os "3 Cs" de Ron Jeffries: Card, Conversation, Confirmation). Esta skill ajuda Product Owners, Product Managers e alunos a chegar numa story que o time consiga entender, estimar, entregar e testar sem precisar adivinhar.
+
+A skill segue o método da K21 para saúde de histórias: o formato `Eu, enquanto <personagem> desejo <necessidade> para <propósito>` (equivalente a "Como... quero... para...") e os **9 passos** de `references/saude-k21-9-passos.md`, que servem de checklist e de vocabulário ("falha o passo 6"). A nota de 0 a 100 vem da rubrica; os passos dizem o que olhar.
 
 A skill tem dois modos e os dois usam a mesma régua de qualidade. Isso é de propósito: quem cria com um critério e avalia com outro acaba escrevendo stories que ele mesmo reprovaria.
 
@@ -21,7 +23,7 @@ Responda no idioma do usuário (padrão: português do Brasil). Use tom de mento
 
 ## Modo avaliar
 
-1. Leia `references/rubrica.md`. Ela traz as âncoras de nota de cada critério e é o que torna as notas comparáveis de uma avaliação para outra.
+1. Leia `references/rubrica.md`. Se for a primeira vez, leia também `references/saude-k21-9-passos.md` (checklist dos 9 passos e nível de detalhe da solução). A rubrica traz as âncoras de nota de cada critério e é o que torna as notas comparáveis de uma avaliação para outra.
 2. Dê uma nota de 0 a 100 para cada um dos 9 critérios abaixo. Cada nota precisa de uma justificativa curta ancorada em um trecho da própria story (cite entre aspas), porque nota sem evidência vira opinião e o usuário não aprende com ela.
 3. Calcule a nota geral (média ponderada) e aplique as regras de teto.
 4. Dê o veredito de tamanho (cabe, atenção, precisa fatiar) e, se precisar fatiar, proponha as fatias (veja `references/fatiamento.md`).
@@ -45,6 +47,7 @@ Os pesos refletem onde as stories mais falham na prática: tamanho e critérios 
 
 ### Calibração (leia antes de pontuar)
 
+- **Solução na história depende do time.** Antes de punir "falta de solução" ou "excesso de solução", declare em que quadrante de maturidade x sentimento de dono o time está (veja `references/saude-k21-9-passos.md`). Para um time em formação, uma proposta de solução como campo adicional é aceitável; para um time maduro, a história deve trazer só a necessidade.
 - Ancore cada nota nos descritores da rubrica, não na impressão geral. Dentro de uma faixa, suba ou desça conforme a quantidade de sinais positivos e negativos que o texto mostra.
 - Seja criterioso. Stories reais, escritas sem método, costumam ficar entre 35 e 70. Reserve 90 ou mais para uma story que você colocaria na sprint sem mudar uma vírgula. Se todos os critérios saírem acima de 85, releia procurando o que passou despercebido.
 - Avalie contra o padrão "pronta para o time começar". Se o usuário disser que é um rascunho de backlog, mantenha a régua, mas deixe claro o que é esperado nessa fase (por exemplo, critérios de aceitação ainda ausentes) e o que falta para ficar pronta.
@@ -83,7 +86,7 @@ Use este formato. Se o usuário pedir só a nota, entregue só as seções 1 e 2
 (uma linha por critério, com trecho citado e uma melhoria concreta em uma frase)
 
 ### 2. O que mais pesa
-(os 2 ou 3 problemas que mais afastam a story de ficar pronta, em ordem de impacto, com o porquê)
+(os 2 ou 3 problemas que mais afastam a story de ficar pronta, em ordem de impacto, com o porquê, citando o passo K21 que falha, ex.: "falha o passo 6: duas necessidades coladas com 'e'")
 
 ### 3. Fatiamento
 (só se Atenção ou Precisa fatiar: o padrão de fatiamento usado e a lista de fatias em ordem, cada uma como mini-story de uma linha)

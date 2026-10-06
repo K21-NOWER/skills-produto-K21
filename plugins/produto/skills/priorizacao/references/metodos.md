@@ -1,6 +1,6 @@
 # Métodos de priorização
 
-Conteúdo: 1 RICE · 2 ICE · 3 Valor x Esforço · 4 MoSCoW · 5 Kano · 6 WSJF e Custo do Atraso · 7 Matriz ponderada · Como combinar métodos · Calibração das escalas · Vieses a vigiar
+Conteúdo: 1 RICE · 2 ICE · 3 Valor x Esforço · 4 MoSCoW · 5 Kano · 6 WSJF e Custo do Atraso · 7 Matriz ponderada · 8 Matriz RUT (K21) · Como combinar métodos · Calibração das escalas · Vieses a vigiar
 
 Cada método segue a mesma estrutura: quando usar, que pergunta responde, como pontuar, pontos cegos.
 
@@ -128,11 +128,36 @@ Cada método segue a mesma estrutura: quando usar, que pergunta responde, como p
 
 ---
 
+## 8. Matriz RUT (K21)
+
+**Quando usar:** priorizar backlog, iniciativas, projetos ou portfólio quando não há critérios definidos, e se quer foco no valor para o cliente e na estratégia, sem estimar esforço. "Objetivo" pode ser um processo, produto, serviço, iniciativa ou estratégia.
+
+**Pergunta que responde:** qual item mais importa para o objetivo, olhando não só a urgência, mas também quanto o problema tende a piorar para o cliente?
+
+**Fórmula:** `Business Value (BV) = Relevância x Urgência x Tendência`, cada um de 1 a 5. Ordene pelo BV, do maior para o menor.
+
+| Nota | Relevância (impacto no objetivo) | Urgência (quão rápido precisa ser resolvido) | Tendência (como o problema evolui, na ótica do cliente) |
+|---|---|---|---|
+| 1 | Não é importante: seria bom ter, mas ficaremos bem sem | Fazer agora não faz diferença; dá para esperar | A primeira impressão não é boa, mas o cliente se acostuma |
+| 2 | Desejável, seria bom ter | Não é bom para o objetivo, mas precisa acontecer na próxima oportunidade | Pode ser problemático continuar sem isso no longo prazo |
+| 3 | Importante para o objetivo, porém há contingências | É importante implementar na próxima oportunidade | Teremos problemas se não implementarmos em breve |
+| 4 | Muito importante: o objetivo fica desfalcado sem isso | É urgente: teremos problemas se não estiver na próxima parada | Quanto mais tempo passa, mais problemático fica |
+| 5 | É vital: não há objetivo sem este item | O objetivo está ou será paralisado até a implementação | Piora a cada dia e é extremamente desgastante para o cliente |
+
+**Exemplo:** pagamento com PIX (4 x 4 x 3 = 48); simulação da contratação de seguro (3 x 3 x 5 = 45); inclusão dos dependentes (3 x 2 x 2 = 12); correção do português do FAQ (2 x 1 x 1 = 2).
+
+**Vantagens:** foco estratégico (três dimensões, com o cliente no centro), flexibilidade (as perguntas balizadoras podem ser adaptadas, até para 3 níveis em vez de 5), simplicidade (dá para aplicar com um time inteiro com os balizadores visíveis), alinhamento ao valor (nem tudo que é urgente é o mais valioso) e análise de tendência (o que tem tendência alta pode virar urgente em breve). Serve de problemas operacionais a portfólio de projetos.
+
+**Pontos cegos:** subjetividade (as notas sofrem influência de opiniões, daí a importância de balizadores visíveis); depende de alinhamento sobre os critérios e os itens; não é ideal para emergências, porque foca em valor e não em gravidade (incidentes críticos entram antes, como "obrigatório"). Não considera esforço: combine com Valor x Esforço ou com o esforço dos desenvolvedores quando ele for decisivo.
+
+---
+
 ## Como combinar métodos
 
 - **Filtro e ordenação:** MoSCoW corta; RICE ou ICE ordena dentro de cada grupo.
 - **Triangulação:** método principal e Valor x Esforço como contraprova. Onde discordam, vale a conversa.
-- **Do rápido ao refinado:** ICE para triar 30 ideias; RICE nas 8 finalistas.
+- **Do rápido ao refinado:** ICE ou RUT para triar 30 ideias; RICE nas 8 finalistas.
+- **Valor mais esforço:** RUT dá o valor (BV) e a estimativa dos desenvolvedores dá o esforço; compare BV ÷ esforço para decidir.
 - **Para a incerteza:** itens de confiança baixa viram hipóteses (skill `hipoteses`), testadas antes de pontuar de novo.
 
 ## Calibração das escalas

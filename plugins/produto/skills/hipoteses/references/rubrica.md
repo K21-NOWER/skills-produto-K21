@@ -53,8 +53,8 @@ Conteúdo: 1 Clareza · 2 Público · 3 Falseabilidade · 4 Mensurabilidade · 5
 
 | Faixa | Descritor |
 |---|---|
-| 90-100 | Métrica, baseline, critério numérico e prazo, todos definidos |
-| 70-89 | Métrica e critério claros; falta baseline ou prazo |
+| 90-100 | Métrica principal ligada ao problema, métricas de equilíbrio, baseline, critério numérico e prazo, todos definidos antes |
+| 70-89 | Métrica e critério claros; falta baseline, prazo ou métrica de equilíbrio |
 | 40-69 | Cita uma métrica, mas sem critério ("aumentar a conversão") |
 | 0-39 | Nenhuma métrica, ou métrica de vaidade sem relação com o comportamento (curtidas, visitas) |
 

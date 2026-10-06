@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Calcula notas de priorização e imprime uma tabela em Markdown, da maior nota para a menor.
 
-Métodos: rice, ice, wsjf, ponderada, valor-esforco.
+Métodos: rice, ice, wsjf, rut, ponderada, valor-esforco.
 
 Uso:
     python3 calcular.py rice itens.json
@@ -20,6 +20,9 @@ Formato do JSON de entrada (todas as chaves em português, sem acento):
   wsjf           {"itens": [{"nome": "...", "valor": 8, "urgencia": 5, "risco": 3, "tamanho": 5}]}
                  custo do atraso = valor + urgencia + risco; nota = custo do atraso / tamanho
 
+  rut            {"itens": [{"nome": "...", "relevancia": 4, "urgencia": 4, "tendencia": 3}]}
+                 notas de 1 a 5; Business Value = relevancia x urgencia x tendencia (Matriz RUT, K21)
+
   ponderada      {"criterios": {"Alinhamento": 40, "Receita": 30, "Facilidade": 30},
                   "itens": [{"nome": "...", "notas": {"Alinhamento": 5, "Receita": 3, "Facilidade": 2}}]}
                  nota = soma(peso x nota) / soma(pesos). Esforço entra como "Facilidade" (nota alta = fácil).
@@ -34,7 +37,7 @@ Só usa a biblioteca padrão do Python.
 import json
 import sys
 
-METODOS = ("rice", "ice", "wsjf", "ponderada", "valor-esforco")
+METODOS = ("rice", "ice", "wsjf", "rut", "ponderada", "valor-esforco")
 
 
 def erro(mensagem):
@@ -131,6 +134,23 @@ def wsjf(dados):
     )
 
 
+def rut(dados):
+    linhas = []
+    for item in dados["itens"]:
+        r = numero(item, "relevancia")
+        u = numero(item, "urgencia")
+        tend = numero(item, "tendencia")
+        for nome, valor in (("relevancia", r), ("urgencia", u), ("tendencia", tend)):
+            if valor < 1 or valor > 5:
+                erro(f'o campo "{nome}" do item "{nome_do(item)}" precisa estar entre 1 e 5')
+        linhas.append((nome_do(item), r * u * tend, r, u, tend))
+    linhas.sort(key=lambda l: l[1], reverse=True)
+    corpo = [(i + 1, *l) for i, l in enumerate(linhas)]
+    return "Business Value (RUT) = Relevância x Urgência x Tendência (notas de 1 a 5)", tabela(
+        ["#", "Item", "Business Value", "Relevância", "Urgência", "Tendência"], corpo
+    )
+
+
 def ponderada(dados):
     criterios = dados.get("criterios")
     if not isinstance(criterios, dict) or not criterios:
@@ -190,6 +210,7 @@ FUNCOES = {
     "rice": rice,
     "ice": ice,
     "wsjf": wsjf,
+    "rut": rut,
     "ponderada": ponderada,
     "valor-esforco": valor_esforco,
 }
