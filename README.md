@@ -37,7 +37,7 @@ Passo a passo testado no claude.ai. O caminho é o mesmo no app desktop e no Cow
 
 Pronto: as quatro skills ficam em **Customize > Skills** e o Claude as usa quando o seu pedido combina. Para chamar uma na mão, digite `/` no chat e escolha a skill.
 
-Se aparecer o aviso "Auto-sync requires the Claude GitHub App...", você pode ignorá-lo: ele só diz que a atualização automática precisa dessa permissão. O plugin funciona normalmente.
+Se aparecer o aviso "Auto-sync requires the Claude GitHub App...", o plugin funciona normalmente. O aviso só diz que a atualização automática depende de você dar acesso ao app (botão **Grant access**). Sem isso, você continua com a versão que instalou.
 
 O plugin fica na sua conta, então também chega ao Cowork e ao Claude Code. Prefere um arquivo em vez do marketplace? Baixe `produto-plugin.zip` na página de [Releases](https://github.com/K21-NOWER/skills-produto-K21/releases) e use **Add > Upload plugin**.
 
@@ -127,9 +127,9 @@ scripts/empacotar.py                valida e gera os .zip em dist/
 
 - **Gerar os arquivos da Release:** `python3 scripts/empacotar.py`. O script valida frontmatter, nomes, tamanho das descrições e caminhos, e só então gera 6 arquivos em `dist/`: um `.zip` por skill, o `produto-k21.zip` (pacote único) e o `produto-plugin.zip` (plugin completo).
 - **Fonte única da verdade:** o pacote único é montado a partir das quatro skills de `plugins/produto/skills/`, mais o roteador `pacote-unico/SKILL.md`. Edite só esses arquivos, nunca o `.zip`.
-- **Atualizações:** quem usa o marketplace acompanha o `main`. Quem enviou um `.zip` só atualiza ao enviar de novo, então publique uma Release nova a cada mudança relevante.
+- **Atualizações:** no Claude Code, quem usa o marketplace acompanha o `main`. No claude.ai, a atualização automática só chega para quem der ao Claude GitHub App acesso ao repositório; sem isso, a pessoa fica na versão instalada. Quem enviou um `.zip` só atualiza ao enviar de novo, então publique uma Release nova a cada mudança relevante.
 - O plugin não define `version`: o Claude Code acompanha os commits. Se um dia quiser fixar versões, defina `version` no `plugin.json` e aumente a cada publicação, ou os alunos não recebem as mudanças.
-- **O que já foi testado:** marketplace, instalação do plugin e uma avaliação real de user story no claude.ai (plano Pro). Os uploads de `.zip` foram validados só na estrutura, e o plano Free ainda não foi testado.
+- **O que já foi testado:** marketplace, instalação do plugin e uma avaliação real de user story no claude.ai (plano Pro). Os uploads de `.zip` (`produto-plugin.zip` e `produto-k21.zip`) foram validados só na estrutura, e a atualização automática e o plano Free ainda não foram testados.
 
 ## Feedback
 
