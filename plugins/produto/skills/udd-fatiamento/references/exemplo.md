@@ -35,6 +35,8 @@ Cálculo: (25x16 + 30x14 + 35x14 + 20x16 + 20x12 + 30x8 + 15x10 + 15x10) ÷ 100 
 
 **Suposições:** o problema central é a falta do paciente (18% hoje, assumido); as clínicas já têm uma agenda, mesmo que de papel ou planilha.
 
+**Direção:** ajudar clínicas pequenas a manter a agenda ocupada; o problema é o paciente que falta sem avisar; para quem: a recepção e o paciente de consulta marcada.
+
 **Hipótese central:** acreditamos que lembrar o paciente 24 horas antes resultará em menos faltas.
 
 **Epicentro:** a parte mais importante do problema mais importante da clínica mais importante: o paciente que esquece a consulta de amanhã.

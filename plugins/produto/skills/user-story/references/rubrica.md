@@ -31,7 +31,7 @@ Papéis internos (suporte, financeiro, operação) são personas válidas quando
 |---|---|
 | 90-100 | Benefício concreto, na perspectiva da persona, ligado a algo que importa (tempo, dinheiro, risco, decisão, esforço evitado). Não repete o "quero" |
 | 70-89 | Benefício claro, porém genérico ("para ganhar eficiência") ou sem como perceber a diferença |
-| 40-69 | O "para" existe, mas é paráfrase da ação ("quero filtrar pedidos para poder filtrar") ou é vago ("para melhorar a experiência") |
+| 40-69 | O "para" existe, mas é paráfrase da ação ("quero filtrar pedidos para poder filtrar") ou é vago ("para melhorar a experiência", "para tomada de decisão") |
 | 0-39 | Sem "para"; ou o valor é só do time ou da tecnologia, sem ligação com o usuário ou o negócio |
 
 ---
@@ -57,7 +57,7 @@ Uma story pode estar perfeitamente implementada e mesmo assim não resolver nada
 
 Procure: termos vagos, siglas sem definição, pronomes soltos, várias ações coladas com "e" ou "ou", frases longas demais.
 
-Termos vagos frequentes: rápido, fácil, simples, intuitivo, amigável, moderno, flexível, robusto, eficiente, adequado, "quando necessário", "etc.", "entre outros", "gerenciar", "melhorar".
+Termos vagos frequentes: rápido, fácil, facilmente, simples, intuitivo, amigável, moderno, flexível, robusto, eficiente, adequado, "quando necessário", "etc.", "entre outros", "gerenciar", "melhorar".
 
 | Faixa | Descritor |
 |---|---|
@@ -72,7 +72,7 @@ Termos vagos frequentes: rápido, fácil, simples, intuitivo, amigável, moderno
 
 **Pergunta:** descreve a necessidade ou já prescreve a solução?
 
-Sinais de solução prescrita: componentes de interface (botão, dropdown, modal, aba), cores, tecnologias, tabelas, endpoints, nomes de banco, verbos de implementação ("criar tabela", "integrar API") no lugar da necessidade.
+Sinais de solução prescrita: componentes de interface (botão, dropdown, modal, aba), cores, tecnologias, tabelas, endpoints, nomes de banco, verbos de implementação ("criar tabela", "integrar API") e canal ou meio de entrega escolhido sem necessidade ("receber um **e-mail**" quando a necessidade é ser avisado: "receber um aviso" deixa e-mail, WhatsApp, banner e ligação em aberto). Passo 5 do método K21.
 
 Restrições reais (lei, integração obrigatória com sistema legado, padrão da marca) podem aparecer, desde que declaradas como restrição e não como o jeito de resolver.
 

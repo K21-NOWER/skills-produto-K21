@@ -53,6 +53,11 @@ Cálculo: (30x12 + 25x14 + 20x14 + 20x12 + 30x10 + 15x14 + 20x10 + 25x14) ÷ 100
 
 ### Qualidade (autoavaliação): 86/100
 
+### Próximos passos
+
+- Transformar a ideia em foco em Test Card com a skill `hipoteses` e em história com `user-story`.
+- Definir as métricas de equilíbrio com `metricas-de-produto` antes de começar.
+
 ### 4. Perguntas e suposições
 
 - Assumi que a empresa quer foco em uma causa. Se há outro objetivo (receita por clínica), o Tanque muda.

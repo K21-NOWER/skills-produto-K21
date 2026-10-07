@@ -10,7 +10,7 @@ maiúsculas, minúsculas e acentos (as que não existirem são ignoradas):
 
   titulo      titulo, title, nome, summary, resumo
   criado em   criado, criado_em, data_criacao, created, created_at
-  tamanho     tamanho, estimativa, pontos, size, story_points
+  tamanho     tamanho, estimativa, pontos, points, size, story_points
   status      status, estado, situacao
   ordem       prioridade, ordem, rank (número; se faltar, vale a ordem das linhas, do topo para baixo)
 
@@ -31,7 +31,7 @@ from difflib import SequenceMatcher
 NOMES = {
     "titulo": ("titulo", "title", "nome", "summary", "resumo"),
     "criado": ("criado", "criado_em", "data_criacao", "created", "created_at"),
-    "tamanho": ("tamanho", "estimativa", "pontos", "size", "story_points"),
+    "tamanho": ("tamanho", "estimativa", "pontos", "points", "size", "story_points", "story_point_estimate"),
     "status": ("status", "estado", "situacao"),
     "ordem": ("prioridade", "ordem", "rank"),
 }

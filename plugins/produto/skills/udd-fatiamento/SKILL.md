@@ -89,5 +89,6 @@ Calibre com rigor: planos reais, sem método, ficam entre 20 e 60. Reserve 90 ou
 - **Produtividade não é progresso.** Dá para ser muito produtivo construindo a coisa errada.
 - **Cada fatia prova valor antes da próxima.** Não é o roadmap que manda, é o uso.
 - **Lançar algo pequeno o bastante para aprender rápido e relevante o bastante para gerar sinal.**
+- **Sem dado, sem número.** Onde faltar informação (metas, volumes, prazos, nomes), escreva a suposição entre colchetes para o usuário substituir. Um resultado com números inventados parece pronto e leva o time a decidir com confiança no que não existe.
 
 Para a hipótese e o experimento de cada fatia, use `hipoteses`. Para escrever as histórias de cada fatia, use `user-story`. Para as métricas de uso, use `metricas-de-produto`. Para ver uma avaliação completa, leia `references/exemplo.md`.

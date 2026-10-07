@@ -134,12 +134,12 @@ def cmd_tempos(args):
     if len(dias) < 5:
         print("Atenção: menos de 5 itens concluídos; os percentis dizem pouco.\n")
     ordenados = sorted(dias)
-    print(f"**Tempos de entrega de {len(dias)} itens concluídos (dias)**\n")
+    print(f"**Tempos de entrega de {len(dias)} {'item concluído' if len(dias) == 1 else 'itens concluídos'} (dias)**\n")
     print("| Medida | Dias |")
     print("|---|---|")
     for p in PERCENTIS_PRAZO:
         print(f"| Percentil {p} | {percentil(ordenados, p):g} |")
-    print(f"| Média | {sum(dias) / len(dias):.1f} |")
+    print(f"| Média | {sum(dias) / len(dias):.1f} |".replace(".", ","))
     print(f"| Mínimo / máximo | {min(dias):g} / {max(dias):g} |")
     print(f"\nExpectativa de nível de serviço (SLE) sugerida: 85% dos itens em até {percentil(ordenados, 85):g} dias.")
     print("Observação: use a mesma definição de início e fim para todos os itens (por exemplo, do compromisso à entrega).")

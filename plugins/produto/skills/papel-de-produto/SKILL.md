@@ -1,6 +1,6 @@
 ---
 name: papel-de-produto
-description: Faz o autodiagnóstico do papel de Product Owner, Product Manager ou Group Product Manager com os 7 arquétipos do PO, as disfunções do papel (hierarquia de donos, PO comitê, desempoderado, garçom, mestre dos magos, César, técnico, freio de mão puxado) e um termômetro de 0 a 100, compara PO, PM, GPM e gerente de projetos, e monta plano de evolução e Matriz de Faixas para carreira e feedback. Use sempre que o usuário falar de papel do PO, diferença entre PO e PM, GPM, gerente de projetos x produto, arquétipo, disfunção do PO, carreira de produto, "meu PO não decide nada", "sou PO ou PM?", dar feedback a quem trabalha com produto ou desenhar quem decide o quê, mesmo sem citar esses termos.
+description: Faz o autodiagnóstico do papel de Product Owner, Product Manager ou Group Product Manager com os 7 arquétipos do PO, as disfunções do papel (hierarquia de donos, PO comitê, desempoderado, garçom, mestre dos magos, César, técnico, freio de mão puxado) e um termômetro de 0 a 100, compara PO, PM, GPM e gerente de projetos, e monta plano de evolução e Matriz de Faixas para carreira e feedback. Use sempre que o usuário falar de papel do PO, diferença entre PO e PM, GPM, gerente de projetos x produto, arquétipo, disfunção do PO, carreira de produto, "meu PO não decide nada", "sou PO ou PM?", "será que estou fazendo certo como PO?", "me avalia como PO", dar feedback a quem trabalha com produto ou desenhar quem decide o quê, mesmo sem citar esses termos.
 ---
 
 # Papel de produto: diagnóstico, comparação e evolução
@@ -66,5 +66,6 @@ Calibre com rigor e sem dureza: relatos reais ficam entre 30 e 75. Se o usuário
 - **Um é pouco, dois é demais, para o papel de dono.** "O Product Owner é uma pessoa, não um comitê."
 - **PO não é cliente nem intermediário.** Quem só repassa pedido do negócio ao time infantiliza o time e perde o contexto.
 - **Quem lidera quem faz produto** desenvolve pessoas: mentoria, feedback e clareza de expectativas.
+- **Sem dado, sem número.** Onde faltar informação (metas, volumes, prazos, nomes), escreva a suposição entre colchetes para o usuário substituir. Um resultado com números inventados parece pronto e leva o time a decidir com confiança no que não existe.
 
 Para a Matriz de Faixas, leia `references/matriz-de-faixas.md`. Para fatiar, descartar e priorizar, use `udd-fatiamento` e `priorizacao`. Para ver um diagnóstico completo, leia `references/exemplo.md`.
