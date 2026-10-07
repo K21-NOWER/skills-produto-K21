@@ -1,5 +1,7 @@
 # Skills de Produto | K21 e Nower
 
+[![Testes](https://github.com/K21-NOWER/skills-produto-K21/actions/workflows/testes.yml/badge.svg)](https://github.com/K21-NOWER/skills-produto-K21/actions/workflows/testes.yml) [![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-green.svg)](LICENSE) [![Release](https://img.shields.io/github/v/release/K21-NOWER/skills-produto-K21)](https://github.com/K21-NOWER/skills-produto-K21/releases)
+
 14 skills em português para o Claude que ajudam quem trabalha com produto a **escrever melhor, decidir melhor e testar antes de construir**, com base na metodologia da K21 (UDD, Test Card 2.0, Matriz RUT, Tanque de Decantação e outras). Feitas para os alunos da K21 e da Nower, de graça e abertas para todo mundo usar.
 
 Uma *skill* é um pacote de instruções que o Claude carrega sozinho quando o seu pedido combina com ela. Você não precisa decorar comandos: descreva o que quer e o Claude usa a skill certa.
@@ -150,19 +152,23 @@ plugins/produto/
                                     priorizacao, saude-do-backlog e previsibilidade)
 pacote-unico/SKILL.md               roteador do pacote único (produto-k21.zip)
 scripts/empacotar.py                valida e gera os .zip em dist/
+scripts/testar.py, tests/           testes automáticos (scripts, estrutura, acionamento, empacotamento)
+.github/                            workflow de testes, modelos de issue e de pull request
+CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md
 ```
 
 ## Para quem mantém o repositório
 
+- **Testar antes de publicar:** `python3 scripts/testar.py` roda os testes dos scripts (contas conferidas à mão e entradas inválidas), da estrutura das skills (frontmatter, rubricas, pesos, referências), do acionamento (aproximado) e o empacotamento. O GitHub roda o mesmo em todo pull request.
 - **Gerar os arquivos da Release:** `python3 scripts/empacotar.py`. O script valida frontmatter, nomes, tamanho das descrições, caminhos e se o roteador do pacote único lista todas as skills, e só então gera 16 arquivos em `dist/`: um `.zip` por skill (14), o `produto-k21.zip` (pacote único) e o `produto-plugin.zip` (plugin completo).
 - **Fonte única da verdade:** o pacote único é montado a partir das skills de `plugins/produto/skills/`, mais o roteador `pacote-unico/SKILL.md`. Edite só esses arquivos, nunca o `.zip`.
 - **Atualizações:** no Claude Code, quem usa o marketplace acompanha o `main`. No claude.ai, a atualização automática só chega para quem der ao Claude GitHub App acesso ao repositório; sem isso, a pessoa fica na versão instalada. Quem enviou um `.zip` só atualiza ao enviar de novo, então publique uma Release nova a cada mudança relevante.
 - O plugin não define `version`: o Claude Code acompanha os commits. Se um dia quiser fixar versões, defina `version` no `plugin.json` e aumente a cada publicação, ou os alunos não recebem as mudanças.
-- **O que já foi testado:** marketplace, instalação do plugin e uma avaliação real de user story no claude.ai (plano Pro). Os uploads de `.zip` (`produto-plugin.zip` e `produto-k21.zip`) foram validados só na estrutura, e a atualização automática e o plano Free ainda não foram testados.
+- **O que já foi testado:** no claude.ai (plano Pro), o marketplace, a instalação do plugin e uma avaliação real de user story. Na máquina de quem mantém, a bateria automática descrita acima, incluindo o conteúdo dos zips da Release. Ainda não foram testados no claude.ai: o upload dos `.zip` (`produto-plugin.zip` e `produto-k21.zip`), a atualização automática, o plano Free e as skills novas em conversas reais. Se você testar, conte numa [issue](https://github.com/K21-NOWER/skills-produto-K21/issues/new/choose).
 
 ## Feedback
 
-Achou uma nota estranha, uma explicação confusa ou quer sugerir uma skill nova? Abra uma [issue](https://github.com/K21-NOWER/skills-produto-K21/issues).
+Achou uma nota estranha, uma explicação confusa ou quer sugerir uma skill nova? Abra uma [issue](https://github.com/K21-NOWER/skills-produto-K21/issues/new/choose) (há um modelo para cada caso) e veja o [guia de contribuição](CONTRIBUTING.md).
 
 ## Licença
 

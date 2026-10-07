@@ -1,0 +1,21 @@
+name: Sugestão de skill ou melhoria
+description: Uma ideia de skill nova, ou um ajuste em uma existente
+labels: ["sugestão"]
+body:
+  - type: textarea
+    id: ideia
+    attributes:
+      label: Qual é a ideia?
+      description: Para skill nova, diga que problema do dia a dia de produto ela resolve e quem usaria (PO, PM, GP).
+    validations:
+      required: true
+  - type: textarea
+    id: exemplo
+    attributes:
+      label: Um pedido de exemplo
+      description: Como você pediria isso ao Claude, e como seria uma boa resposta.
+  - type: input
+    id: fonte
+    attributes:
+      label: Conteúdo de base
+      description: Artigo, curso ou método da K21 em que a skill se apoiaria, se houver.
