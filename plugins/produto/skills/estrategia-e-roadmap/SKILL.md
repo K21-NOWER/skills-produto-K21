@@ -79,5 +79,6 @@ Formato de saída: nota no topo, tabela por critério com evidência, o que mais
 - **Todas as ideias valem, desde que haja causalidade entre cada ideia e a métrica que ela altera.**
 - **Roadmap por resultado.** Visibilidade, adaptação e previsibilidade com possibilidade de mudar de direção, e não um compromisso de entregar tudo o que foi planejado.
 - **Cliente no centro, de verdade.** Segmentar por renda ou perfil não garante centralidade: mapeie os **propósitos** do cliente.
+- **Sem dado, sem número.** Onde faltar informação (metas, volumes, prazos, nomes), escreva a suposição entre colchetes para o usuário substituir. Um resultado com números inventados parece pronto e leva o time a decidir com confiança no que não existe.
 
 Para as métricas, use `metricas-de-produto`; para os objetivos do ciclo, `okr`; para testar as ideias, `hipoteses`; para fatiar o foco, `udd-fatiamento`; para a visão, `visao-do-produto`. Para ver uma avaliação completa, leia `references/exemplo.md`.

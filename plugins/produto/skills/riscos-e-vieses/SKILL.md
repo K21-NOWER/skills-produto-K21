@@ -72,5 +72,6 @@ Calibre com rigor: decisões comuns, tomadas sem método, ficam entre 20 e 55. R
 - **Quanto menor a incerteza, melhores as decisões.** O experimento mais barato que reduz a maior incerteza vem primeiro.
 - **Ambiente "safe to error", não "error safe".** Se o time responde "sim" a todas as perguntas da matriz antes de entender, é sinal de que não há segurança para errar.
 - **Não ignore os pessimistas** (podem ter informação), mas não entre na marcha da morte com eles.
+- **Sem dado, sem número.** Onde faltar informação (metas, volumes, prazos, nomes), escreva a suposição entre colchetes para o usuário substituir. Um resultado com números inventados parece pronto e leva o time a decidir com confiança no que não existe.
 
 Para transformar o experimento em Test Card, use `hipoteses`. Para entrevistar clientes, `discovery-com-clientes`. Para as métricas, `metricas-de-produto`. Para priorizar o que sobra, `priorizacao`. Para ver um pré-mortem completo, leia `references/exemplo.md`.

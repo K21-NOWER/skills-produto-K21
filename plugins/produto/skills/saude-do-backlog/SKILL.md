@@ -81,4 +81,8 @@ Se o usuário pedir só a nota, entregue as seções 1 e 2. Não apague nada por
 - **Junte duplicados** e itens que só fazem sentido juntos.
 - **Cada item do topo tem um porquê:** a que objetivo ou métrica ele serve.
 
+## Princípio
+
+- **Sem dado, sem número.** Onde faltar informação (metas, volumes, prazos, nomes), escreva a suposição entre colchetes para o usuário substituir. Um resultado com números inventados parece pronto e leva o time a decidir com confiança no que não existe.
+
 Para priorizar o que sobrou, use `priorizacao`. Para ver uma auditoria completa, leia `references/exemplo.md`.

@@ -1,0 +1,45 @@
+name: Nota ou resposta estranha
+description: Uma skill deu uma nota que não faz sentido, uma explicação confusa ou uma resposta errada
+labels: ["feedback"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Qual skill?
+      options:
+        - user-story
+        - visao-do-produto
+        - priorizacao
+        - hipoteses
+        - metricas-de-produto
+        - udd-fatiamento
+        - okr
+        - saude-do-backlog
+        - previsibilidade
+        - papel-de-produto
+        - discovery-com-clientes
+        - estrategia-e-roadmap
+        - apresentacao-de-produto
+        - riscos-e-vieses
+        - pacote único (produto-k21)
+    validations:
+      required: true
+  - type: textarea
+    id: pedido
+    attributes:
+      label: O que você pediu
+      description: Cole o texto que você enviou ao Claude. Tire dados que sejam sigilosos.
+    validations:
+      required: true
+  - type: textarea
+    id: resposta
+    attributes:
+      label: O que o Claude respondeu e o que estranhou
+      description: Qual nota ou trecho pareceu errado, e por quê.
+    validations:
+      required: true
+  - type: input
+    id: onde
+    attributes:
+      label: Onde você usa o Claude
+      description: Site, app desktop, Cowork ou Claude Code; plano e forma de instalação (marketplace ou zip).
