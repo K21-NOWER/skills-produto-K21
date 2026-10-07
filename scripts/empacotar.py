@@ -4,11 +4,11 @@
 Arquivos gerados:
   dist/<skill>.zip          uma skill por arquivo
                             (Claude.ai e Claude Desktop: Customize > Skills > Upload a skill)
-  dist/produto-k21.zip      as quatro skills reunidas em uma só (pacote único), para subir uma vez
+  dist/produto-k21.zip      todas as skills reunidas em uma só (pacote único), para subir uma vez
   dist/produto-plugin.zip   o plugin completo
                             (Claude.ai e Claude Desktop: Customize > Plugins > Add > Upload plugin)
 
-O pacote único é montado a partir das quatro skills de plugins/produto/skills, que são a fonte
+O pacote único é montado a partir das skills de plugins/produto/skills, que são a fonte
 única da verdade, mais o roteador pacote-unico/SKILL.md. Nada é copiado à mão: ao mudar uma skill,
 basta rodar este script de novo.
 
@@ -120,7 +120,11 @@ def verificar_pacote_unico(raiz):
     total = len(list(raiz.rglob("SKILL.md")))
     if total != 1:
         erros.append(f"o pacote único deve ter exatamente um SKILL.md, mas tem {total}")
-    erros += verificar_caminhos("roteador", (raiz / "SKILL.md").read_text(encoding="utf-8"), raiz)
+    roteador = (raiz / "SKILL.md").read_text(encoding="utf-8")
+    erros += verificar_caminhos("roteador", roteador, raiz)
+    for modo in sorted((raiz / "modos").iterdir()):
+        if f"`modos/{modo.name}/MODO.md`" not in roteador:
+            erros.append(f"o roteador não lista o modo {modo.name}")
     for modo in sorted((raiz / "modos").iterdir()):
         texto = (modo / "MODO.md").read_text(encoding="utf-8")
         erros += verificar_caminhos(f"modo {modo.name}", texto, raiz)

@@ -1,12 +1,12 @@
 {
   "name": "produto",
   "displayName": "Produto K21",
-  "description": "Skills de gestão de produto em português: user story, visão do produto, priorização e hipóteses.",
+  "description": "14 skills de gestão de produto em português, baseadas na metodologia da K21: user story, visão, priorização, hipóteses, métricas, OKR, backlog, previsibilidade, discovery, estratégia e mais.",
   "author": {
     "name": "K21 e Nower"
   },
   "homepage": "https://github.com/K21-NOWER/skills-produto-K21",
   "repository": "https://github.com/K21-NOWER/skills-produto-K21",
   "license": "MIT",
-  "keywords": ["produto", "agile", "user-story", "visao-do-produto", "priorizacao", "hipoteses", "pt-br"]
+  "keywords": ["produto", "agile", "user-story", "visao-do-produto", "priorizacao", "hipoteses", "metricas", "okr", "backlog", "discovery", "roadmap", "pt-br"]
 }

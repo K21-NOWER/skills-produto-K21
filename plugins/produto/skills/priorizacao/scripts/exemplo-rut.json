@@ -1,0 +1,8 @@
+{
+  "itens": [
+    {"nome": "Pagamento com PIX", "relevancia": 4, "urgencia": 4, "tendencia": 3},
+    {"nome": "Simulação da contratação de seguro", "relevancia": 3, "urgencia": 3, "tendencia": 5},
+    {"nome": "Inclusão dos dependentes como beneficiários", "relevancia": 3, "urgencia": 2, "tendencia": 2},
+    {"nome": "Correção de português do FAQ", "relevancia": 2, "urgencia": 1, "tendencia": 1}
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 name: priorizacao
-description: Ajuda Product Owners e Product Managers a priorizar uma lista de atividades (funcionalidades, user stories, ideias, projetos, iniciativas) com critério e explicação. Escolhe o método certo para o contexto (RICE, ICE, Valor x Esforço, MoSCoW, Kano, WSJF e Custo do Atraso ou matriz ponderada), pontua cada item de forma transparente, ordena, explica por que cada item ficou onde ficou, mostra o que mudaria a ordem e separa o que fazer agora, depois e descartar. Use sempre que o usuário pedir para priorizar, ordenar o backlog, decidir o que fazer primeiro, montar um roadmap, escolher entre iniciativas, aplicar RICE, ICE, MoSCoW, WSJF ou Kano, ou perguntar "o que eu faço primeiro?", "como priorizar isso?", "qual desses vale mais a pena?", mesmo que não cite nenhum método.
+description: Ajuda Product Owners e Product Managers a priorizar uma lista de atividades (funcionalidades, user stories, ideias, projetos, iniciativas) com critério e explicação. Escolhe o método certo para o contexto (RICE, ICE, Matriz RUT da K21, Valor x Esforço, MoSCoW, Kano, WSJF e Custo do Atraso ou matriz ponderada), pontua cada item de forma transparente, ordena, explica por que cada item ficou onde ficou, mostra o que mudaria a ordem e separa o que fazer agora, depois e descartar. Use sempre que o usuário pedir para priorizar, ordenar o backlog, decidir o que fazer primeiro, montar um roadmap, escolher entre iniciativas, aplicar RICE, ICE, RUT, MoSCoW, WSJF ou Kano, ou perguntar "o que eu faço primeiro?", "como priorizar isso?", "qual desses vale mais a pena?", mesmo que não cite nenhum método.
 ---
 
 # Priorização
@@ -40,7 +40,8 @@ Se o usuário pedir só "o que faço primeiro?" com poucos itens, responda de fo
 - **Itens grandes demais** (épicos) distorcem qualquer método: sugira fatiar com a skill `user-story` antes de pontuar.
 - **Itens que são apostas incertas** (confiança baixa, ninguém sabe se funciona) são hipóteses: sugira testar com a skill `hipoteses` em vez de forçar uma nota.
 - **Obrigações não competem pela mesma régua.** Correções críticas, segurança, compliance e incidentes entram antes como "obrigatório", e dívida técnica e manutenção costumam ter capacidade reservada (muitos times separam 10 a 20%). Pontue só o que de fato precisa competir.
-- Com **mais de 25 itens**, faça uma triagem rápida (Valor x Esforço ou ICE) e pontue só os finalistas com o método principal.
+- Com **mais de 25 itens**, faça uma triagem rápida (Valor x Esforço, ICE ou RUT) e pontue só os finalistas com o método principal.
+- **Itens sem objetivo ligado** não precisam competir: classifique-os como descartar ou prateleira (com prazo de validade) e use a skill `saude-do-backlog` para decidir o destino.
 
 ### 3. Escolher o método
 
@@ -50,6 +51,7 @@ Leia `references/metodos.md` para fórmulas, escalas e pontos cegos de cada mét
 |---|---|---|
 | Produto com usuários e alguma métrica; muitos candidatos; precisa comparar com número | **RICE** | Considera alcance e confiança, não só impacto |
 | Produto novo, poucos dados, ritmo rápido, backlog de experimentos | **ICE** | Leve, tolera estimativa grosseira |
+| Quer priorizar pelo **valor para o objetivo e para o cliente**, sem depender de dados nem de estimativa de esforço, olhando também a urgência e a tendência do problema | **Matriz RUT** (K21) | Três perguntas simples (Relevância, Urgência, Tendência), fáceis de aplicar com o time; evita priorizar só por urgência |
 | Workshop com stakeholders; precisa de algo visual e rápido | **Valor x Esforço** | Fácil de explicar e de discutir em grupo |
 | Escopo fechado: release, MVP, prazo regulatório | **MoSCoW** | Define o mínimo viável do release |
 | Entender como o cliente percebe as funcionalidades | **Kano** | Separa o obrigatório do que encanta |
@@ -62,7 +64,7 @@ Explique a escolha em duas ou três frases ("usei RICE porque há dados de uso e
 
 - Use as escalas de `references/metodos.md` e **a mesma escala e o mesmo período para todos os itens**.
 - **Marque a origem de cada estimativa:** `D` (dado fornecido ou medido) ou `E` (estimativa sua, suposição). Pontue com faixas de referência e não com falsa precisão: "Alcance 4.000" ou "Alcance 4.137" dão o mesmo resultado prático, mas o segundo finge saber o que não sabe.
-- **Calcule com cuidado.** Se puder executar código, grave os itens em um JSON temporário e rode o script `scripts/calcular.py` (o formato do JSON está no início do arquivo, e `scripts/exemplo-rice.json` serve de modelo): `python3 ${CLAUDE_SKILL_DIR}/scripts/calcular.py rice itens.json`. No chat do claude.ai, a pasta da skill é copiada para o ambiente de execução, então use o caminho relativo `scripts/calcular.py`. Confira um item à mão. Se não puder executar código, calcule manualmente mostrando a fórmula.
+- **Calcule com cuidado.** Se puder executar código, grave os itens em um JSON temporário e rode o script `scripts/calcular.py` (o formato do JSON está no início do arquivo, e `scripts/exemplo-rice.json` serve de modelo): `python3 ${CLAUDE_SKILL_DIR}/scripts/calcular.py rice itens.json` (métodos: `rice`, `ice`, `wsjf`, `rut`, `ponderada`, `valor-esforco`; para a Matriz RUT, veja `scripts/exemplo-rut.json`). No chat do claude.ai, a pasta da skill é copiada para o ambiente de execução, então use o caminho relativo `scripts/calcular.py`. Confira um item à mão. Se não puder executar código, calcule manualmente mostrando a fórmula.
 - **Itens de confiança baixa** (50% ou menos): pontue, mas sinalize. Alto impacto com baixa confiança é sinal para experimentar antes de construir.
 
 ### 5. Ordenar e testar a sanidade

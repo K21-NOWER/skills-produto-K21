@@ -1,6 +1,6 @@
 ---
 name: hipoteses
-description: Avalia hipóteses de produto, negócio ou crescimento e as transforma em ação. Dá notas de 0 a 100 para a qualidade da hipótese (clareza, público, falseabilidade, mensurabilidade, fundamento, foco, conexão com o resultado, testabilidade), reescreve em formato testável, lista as suposições e os riscos, sugere experimentos baratos com métricas e critérios de sucesso definidos antes, monta um Test Card e converte a hipótese em uma user story com critérios de aceitação, usando a skill user-story. Use sempre que o usuário falar de hipótese, "acredito que", "acho que se a gente...", experimento, teste A/B, MVP, validação de ideia, Test Card, discovery, métricas de sucesso, riscos de uma ideia, ou quiser saber como testar algo antes de construir, mesmo sem usar a palavra hipótese.
+description: Avalia hipóteses de produto, negócio ou crescimento e as transforma em ação. Dá notas de 0 a 100 para a qualidade da hipótese (clareza, público, falseabilidade, mensurabilidade, fundamento, foco, conexão com o resultado, testabilidade), reescreve em formato testável, lista as suposições e os riscos, sugere experimentos baratos com métricas e critérios de sucesso definidos antes, monta um Test Card 2.0 (modelo da K21) e converte a hipótese em uma user story com critérios de aceitação, usando a skill user-story. Use sempre que o usuário falar de hipótese, "acredito que", "acho que se a gente...", experimento, teste A/B, MVP, validação de ideia, Test Card, Learning Card, discovery, métricas de sucesso, riscos de uma ideia, ou quiser saber como testar algo antes de construir, mesmo sem usar a palavra hipótese.
 ---
 
 # Hipóteses: avaliar, testar e transformar em story
@@ -20,11 +20,13 @@ Uma coisa pode estar perfeitamente pronta e não ter funcionado. A segunda pergu
 
 ### 1. Entender e reescrever
 
-Extraia a crença por trás do que o usuário escreveu. Se ele trouxe uma solução ("precisamos de um chat"), pergunte-se qual crença sobre o cliente ou o negócio faria dessa solução uma boa ideia, e escreva essa crença. Reescreva no formato:
+Extraia a crença por trás do que o usuário escreveu. Se ele trouxe uma solução ("precisamos de um chat"), pergunte-se qual crença sobre o cliente ou o negócio faria dessa solução uma boa ideia, e escreva essa crença. Reescreva no formato do Test Card 2.0 da K21, que divide a hipótese em duas partes para evitar hipótese sem expectativa de resultado, métricas desequilibradas e métricas enviesadas pela solução e não pelo problema:
 
-> **Acreditamos que** [mudança ou ação] **para** [público específico] **vai gerar** [resultado observável], **porque** [insight ou evidência]. **Saberemos que estamos certos quando** [métrica] [atingir o critério] **em** [prazo].
+> **Nós acreditamos que** [ação ou mudança, para um público específico] **resultará em** [resultado observável], **porque** [insight ou evidência].
 
-Onde faltar informação (público, número, prazo), escreva a suposição entre colchetes para o usuário confirmar. Nunca invente evidência: se o "porque" é intuição, escreva "intuição, sem evidência ainda".
+A métrica, o critério numérico e o prazo vão para o Test Card (passos 5 e 7). Onde faltar informação (público, número, prazo), escreva a suposição entre colchetes para o usuário confirmar. Nunca invente evidência: se o "porque" é intuição, escreva "intuição, sem evidência ainda".
+
+**Invalidar em vez de validar.** Ao tentar validar uma ideia, tendemos a provar o quanto ela é boa (viés da confirmação) e a nos apegar à solução (viés da solução). Parta do princípio de que a ideia é ruim e tente derrubá-la: se sobreviver, ela merece ser construída; se não, vai para o Cemitério Mexicano (veja a skill `discovery-com-clientes`).
 
 ### 2. Avaliar a qualidade da hipótese
 
@@ -80,27 +82,39 @@ Para cada experimento, informe: o que fazemos, custo e tempo, o que mede, o que 
 
 Leia `references/metricas-e-riscos.md`. Defina:
 
-- **Métrica primária** (a que decide), com linha de base. Se não houver baseline, o primeiro passo do teste é medi-la.
-- **Métricas de apoio** (explicam o porquê) e **de proteção, ou guardrails** (garantem que não causamos dano em outro lugar).
-- **Critério de sucesso numérico, prazo e tamanho de amostra** razoáveis. Defina **antes** de rodar.
+- **Métrica principal** (a que decide), **vinculada ao problema e não à solução**, com linha de base. Se não houver baseline, o primeiro passo do teste é medi-la. Exemplo: para reduzir a perda de clientes, o contrato assinado ou a quantidade de conteúdo não medem o problema; o churn mede.
+- **Métricas de equilíbrio** (guardrails): 1 ou 2 métricas que equilibram a principal e evitam efeito perverso. Medir só uma métrica leva o time a perseguir o número a qualquer custo (reduzir o churn oferecendo 20 meses grátis pode quebrar a empresa e barrar a entrada de novos clientes). Pares típicos: churn, revenue churn e taxa de crescimento. Podem ser negativas ou positivas (retenção em vez de churn).
+- **Critérios de sucesso** numéricos, prazo e tamanho de amostra razoáveis, definidos **antes** de rodar. Podem vir de números de outras empresas do segmento, de comparação com produtos parecidos da empresa, do histórico do produto ou do **CHUTE** (Cálculo de Hipóteses Únicas para Teste e Experimentação): sempre há espaço para algo subjetivo, mas declare. Isso evita métricas de vaidade e "ajustar" o resultado depois para comprovar um sucesso que não existe.
 - **Regra de decisão:** o que fazemos se confirmar, se refutar e se der inconclusivo.
 
 ### 6. Riscos
 
 Liste os riscos do **teste** e da **hipótese**, em tabela: risco, tipo, probabilidade, impacto e mitigação. Inclua sempre uma checagem de ética, privacidade (LGPD) e viés. Veja `references/metricas-e-riscos.md`.
 
-### 7. Montar o Test Card
+### 7. Montar o Test Card 2.0
 
-Resuma o experimento recomendado em um cartão, no estilo do Test Card e do Learning Card de David Bland e Alexander Osterwalder:
+Resuma o experimento recomendado no **Test Card 2.0 da Nower e K21**, uma evolução mais sintética do Test Card original de David Bland e Alexander Osterwalder (Strategyzer):
 
 | Campo | Conteúdo |
 |---|---|
-| **Hipótese** | Acreditamos que... |
-| **Teste** | Para verificar isso, vamos... |
-| **Métrica** | E vamos medir... |
-| **Critério** | Estaremos certos se... |
-| Custo / Tempo / Confiabilidade da evidência | baixo, médio ou alto |
-| Responsável e prazo | [a definir] |
+| **Identificação do teste** | Nome curto, número na ferramenta de gestão ou descrição sucinta do que se testa |
+| **Limite de tempo** | Prazo máximo: uma data ligada a um evento, X sprints ou semanas, ou uma data fixa |
+| **Hipótese** | **Nós acreditamos que**... (a ação). **Resultará em**... (o resultado esperado) |
+| **Métricas** | **Principal:** vinculada ao problema. **Equilíbrio 1 e 2:** protegem o resto |
+| **Experimento** | Descrição sucinta, verificável empiricamente, do que será feito |
+| **Critérios** | Resultados numéricos esperados nas métricas que comprovam ou refutam a hipótese, com a origem |
+| Custo, tempo e confiabilidade da evidência | baixo, médio ou alto (opcional) |
+| Responsável | [a definir] |
+
+**Três cuidados ao executar** (K21):
+
+1. **Não mexa em muitas variáveis em um mesmo experimento.** Se você muda catálogo, preço e mercado ao mesmo tempo e o resultado vem, não dá para saber o que causou. O ideal é um experimento por vez; quando for inevitável testar em paralelo, isole os resultados o máximo possível.
+2. **Não reduza os critérios depois.** 10% não está "pertinho" de 50%. Boas ideias são diferentes de ideias de valor.
+3. **Experimentos devem ser curtos.** Experimentos longos, se invalidados, dão muito trabalho para ser desfeitos. É melhor fazer muitos experimentos pequenos do que poucos longos.
+
+Fatie o experimento para que o resultado se ligue diretamente à causa: "porque fizemos isso, o resultado foi esse".
+
+**Learning Card (depois do teste).** Registre o aprendizado: **Identificação** (nome do insight, data, responsável), **Hipótese** (a mesma do Test Card, no passado: "nós acreditávamos que..."), **Observação** (o que as métricas mostraram), **Aprendizados e insights** e **Decisões e ações** (a decisão tomada ou o próximo experimento). Um Test Card pode ter vários Learning Cards.
 
 ### 8. Transformar em user story
 
@@ -122,8 +136,10 @@ Se o melhor experimento **não exige construir nada** (entrevistas, página de c
 Escreva a regra de decisão combinada com o critério de sucesso:
 
 - **Se confirmar** (atingiu o critério): persistir, construir a fatia seguinte e mirar a próxima suposição.
-- **Se refutar:** pivotar (mudar a solução ou o público) ou abandonar; registrar o aprendizado.
+- **Se refutar:** pivotar (mudar a solução ou o público) ou abandonar; registrar o aprendizado no Learning Card. Uma ideia refutada cedo é motivo de festa (Cemitério Mexicano): poupou meses de trabalho.
 - **Se for inconclusivo** (amostra pequena, resultado no meio): dizer que é inconclusivo, não forçar uma conclusão, e decidir entre estender o teste ou mudar o método.
+
+Antes de investir, rode também a **Matriz de Hipóteses** com a skill `riscos-e-vieses`: o problema existe, a solução resolve, é economicamente viável, é tecnicamente viável.
 
 ## Formato de saída
 
@@ -149,13 +165,13 @@ Para **uma hipótese**, use as seções abaixo. Adapte ao pedido: se o usuário 
 (2 ou 3 opções) + **Recomendação:** [uma frase]
 
 ### 5. Métricas e critério de sucesso
-Primária, apoio, guardrail, baseline, critério numérico, prazo e amostra, regra de decisão.
+Principal, equilíbrio, apoio, baseline, critério numérico, prazo e amostra, regra de decisão.
 
 ### 6. Riscos
 | Risco | Tipo | Prob. | Impacto | Mitigação |
 |---|---|---|---|---|
 
-### 7. Test Card
+### 7. Test Card 2.0
 (tabela do passo 7)
 
 ### 8. User story pronta para o time

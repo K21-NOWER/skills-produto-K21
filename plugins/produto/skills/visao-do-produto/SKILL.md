@@ -115,7 +115,7 @@ O objetivo é sair da ideia com uma visão que o time consiga repetir, sem enche
 
 1. **Levante o essencial.** As cinco informações que sustentam a visão: para quem é; qual problema ou necessidade; que mudança o cliente sente se der certo; o que existe hoje como alternativa (inclusive planilha ou "não fazer nada"); como o produto cria valor para o negócio. Se o usuário não trouxe algumas, **não interrogue**: escreva um primeiro rascunho com as suposições marcadas e peça para ele corrigir. Se a ideia vier em poucas palavras, faça no máximo 4 perguntas curtas, de uma vez.
 2. **Escreva a declaração de visão.** Curta (até 30 palavras), centrada na mudança para o cliente, sem listar funcionalidades. Ofereça a recomendada e duas alternativas com ênfases diferentes (por exemplo, uma no cliente e outra na mudança), explicando em uma frase por que recomendou aquela.
-3. **Monte o posicionamento** no modelo de Geoffrey Moore e o **Product Vision Board** (veja `references/modelos.md` para os modelos e exemplos).
+3. **Monte o posicionamento** no modelo de Geoffrey Moore e o **Product Vision Board** (veja `references/modelos.md` para os modelos e exemplos). Se o usuário já tem várias ideias e precisa ligá-las ao propósito, às métricas e a um foco de validação, ofereça o **Tanque de Decantação** da K21 como canvas alternativo (seção 8 de `references/modelos.md`; o passo a passo está na skill `estrategia-e-roadmap`).
 4. **Diga o que a visão não é.** Duas ou três escolhas explícitas. Uma visão que não deixa nada de fora não orienta nada.
 5. **Liste as premissas críticas**: as crenças que precisam ser verdade para a visão funcionar. Cada uma é uma hipótese em potencial.
 6. **Rode três testes antes de entregar**:
@@ -164,6 +164,7 @@ Para [cliente-alvo] que [necessidade], o [produto] é [categoria] que [benefíci
 ### Próximos passos
 - Transformar as premissas de maior risco em experimentos com a skill `hipoteses`.
 - Quando houver várias iniciativas para alcançar a visão, ordenar com a skill `priorizacao`.
+- Para transformar a visão em estratégia, métricas e roadmap, usar a skill `estrategia-e-roadmap`.
 ```
 
 ## Princípios que sustentam a rubrica

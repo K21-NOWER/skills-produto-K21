@@ -1,6 +1,6 @@
 {
   "name": "k21-produto",
-  "description": "Skills de gestão de produto da K21 e da Nower para alunos: user stories, visão do produto, priorização e hipóteses.",
+  "description": "Skills de gestão de produto da K21 e da Nower para alunos: 14 skills de produto: user stories, visão, priorização, hipóteses, métricas, OKR, backlog, previsibilidade e mais.",
   "owner": {
     "name": "K21 e Nower"
   },
@@ -8,9 +8,9 @@
     {
       "name": "produto",
       "source": "./plugins/produto",
-      "description": "Quatro skills de produto, em português: avalie e crie user stories e visões de produto com notas de 0 a 100, priorize listas de atividades com critério e valide hipóteses com experimentos, métricas e riscos.",
+      "description": "14 skills de produto, em português, baseadas na metodologia da K21: avalie e crie user stories, visões, métricas, OKRs e estratégias com notas de 0 a 100, priorize com RICE, ICE ou Matriz RUT, valide hipóteses com Test Card 2.0, fatie com UDD, preveja prazos com Monte Carlo e antecipe riscos.",
       "category": "produto",
-      "tags": ["produto", "agile", "user-story", "visao", "priorizacao", "hipoteses", "pt-br"]
+      "tags": ["produto", "agile", "user-story", "visao", "priorizacao", "hipoteses", "metricas", "okr", "backlog", "discovery", "roadmap", "pt-br"]
     }
   ]
 }

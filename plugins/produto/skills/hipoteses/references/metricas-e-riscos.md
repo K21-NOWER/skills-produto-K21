@@ -8,9 +8,9 @@ Conteúdo: Tipos de métricas · Boas práticas · Critério de sucesso e regra 
 
 | Tipo | Papel | Exemplo (lembrete antes da consulta) |
 |---|---|---|
-| **Primária** | A que decide. Só uma. | Taxa de faltas |
+| **Principal** | A que decide. Só uma, vinculada ao problema e não à solução. | Taxa de faltas |
 | **De apoio** | Explicam o porquê do resultado | Entrega e leitura da mensagem; taxa de confirmação |
-| **De proteção (guardrail)** | Garantem que não causamos dano em outro lugar | Reclamações e opt-out; cancelamentos de última hora; satisfação |
+| **De equilíbrio (guardrail)** | Equilibram a principal e impedem dano em outro lugar. Medir uma só leva o time a perseguir o número a qualquer custo | Cancelamentos de última hora; reclamações e opt-out; taxa de crescimento |
 
 **Indicador antecedente e indicador resultado.** Antecedente (leading) é o que muda primeiro e permite reagir (taxa de confirmação). Resultado (lagging) é o que importa de fato, mas demora (faltas, receita). Use os dois: o antecedente para acompanhar durante o teste, o resultado para decidir.
 
@@ -28,7 +28,7 @@ Conteúdo: Tipos de métricas · Boas práticas · Critério de sucesso e regra 
 1. **Defina a métrica, a unidade e a janela antes.** "Taxa de faltas por consulta agendada, medida em 4 semanas".
 2. **Tenha uma linha de base.** Sem baseline, "melhorou" não significa nada. Se não existe, o primeiro passo do teste é medi-la.
 3. **Compare grupos ao mesmo tempo**, não "antes e depois". Sazonalidade, feriados e campanhas contaminam comparações no tempo. Um grupo de controle sorteado resolve.
-4. **Defina o sinal de proteção.** Um bom resultado na métrica primária que quebra a de proteção é um resultado ruim.
+4. **Defina a métrica de equilíbrio.** Um bom resultado na métrica principal que quebra a de equilíbrio é um resultado ruim.
 5. **Registre o que será medido e como** antes de começar. É o que impede o ajuste da régua depois.
 
 ---

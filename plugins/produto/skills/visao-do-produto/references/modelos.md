@@ -1,6 +1,6 @@
 # Modelos e exemplos para criar uma visão de produto
 
-Conteúdo: Declaração de visão · Posicionamento (Moore) · Product Vision Board (Pichler) · Manchete de press release · Perguntas para provocar · Reescrevendo visões fracas · Exemplo completo
+Conteúdo: Declaração de visão · Posicionamento (Moore) · Product Vision Board (Pichler) · Manchete de press release · Perguntas para provocar · Reescrevendo visões fracas · Exemplo completo · Tanque de Decantação (alternativa K21)
 
 Os modelos abaixo se complementam: a **declaração de visão** inspira, o **posicionamento** explica quem, o quê e por que, e o **vision board** organiza tudo em uma página. Entregue os três quando criar uma visão.
 
@@ -135,3 +135,14 @@ Para clínicas com até 5 profissionais que perdem receita com faltas, o [produt
 ### 6. Qualidade (autoavaliação): 82/100
 
 Ponto mais fraco: horizonte e métricas de negócio ainda são suposições. Próximo passo: transformar as duas premissas de risco alto em experimentos com a skill `hipoteses`.
+
+---
+
+## 8. Tanque de Decantação (alternativa K21)
+
+Quando a visão precisa nascer ligada a um **propósito de negócio**, a **métricas** e a um **foco de validação**, e não só a uma declaração inspiradora, use o Tanque de Decantação (TD), canvas do Agile Coach da K21 Danilo Risada. Ele é uma alternativa ao Product Vision Board: use o PVB quando o desafio é alinhar público, necessidade, produto e valor de negócio em uma página; use o TD quando o time já tem várias ideias e falta ligá-las ao propósito e escolher qual validar primeiro.
+
+Etapas, de cima para baixo: **Propósito** (objetivo de negócio e motivo de existir) → **Problema** (dores de pessoas ou grupos, na ótica de negócio, sem virar solução técnica) → **Métricas** (o problema existe? qual o tamanho? como saberemos que a solução funciona?) → **Ideias** (no formato "Eu, enquanto [persona], desejo [ideia] para [problema]", com causalidade para uma métrica) → **Foco** (a ideia que mais move a métrica do pior problema, a primeira a validar) → **CCC** (Cartão, Conversa, Confirmação da ideia em foco).
+
+Como a visão sai dele: a declaração de visão é o propósito reescrito do ponto de vista do cliente ("[Público] sai de [problema] para [mudança]"), e as premissas críticas são as ligações de causalidade entre ideia e métrica, prontas para virar hipóteses com a skill `hipoteses`. Para o passo a passo completo, perguntas por etapa e como avaliar um TD, veja `references/ferramentas.md` da skill `estrategia-e-roadmap`.
+

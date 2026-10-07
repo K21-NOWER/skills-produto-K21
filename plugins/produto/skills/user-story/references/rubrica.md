@@ -12,7 +12,7 @@ Conteúdo: 1 Persona · 2 Valor · 3 Efetividade · 4 Clareza · 5 Foco no probl
 
 | Faixa | Descritor |
 |---|---|
-| 90-100 | Papel específico e contexto que influencia a solução. Ex.: "Como recepcionista de clínica no horário de pico" |
+| 90-100 | Personagem com nome e característica ou contexto que influencia a solução e gera empatia. Ex.: "Eu, enquanto Valdir Detalhista" ou "Como recepcionista de clínica no horário de pico" |
 | 70-89 | Papel claro, mas sem o contexto que diferenciaria a solução. Ex.: "Como recepcionista" |
 | 40-69 | Genérica ("Como usuário", "Como cliente"), ou plausível mas incoerente com a ação pedida |
 | 0-39 | Ausente; ou é o sistema ou o time ("Como sistema", "Como desenvolvedor") numa entrega de valor ao usuário final; ou mistura várias personas |
